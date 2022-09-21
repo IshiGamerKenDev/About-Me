@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Texts Animated | By Sonw</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section>
+            <p class="text">Hello! please introduce my name as Tran Minh Son and I am a young child. I was born on 07/25(i wouldn't say my year of birth :>).  And I'm not too ignorant or too talented, just a normal person like everyone else!!!  I am also a YouTuber, i often do about videos such as: Games, Musics, Video Editor, AMV,..., Am I friendly? and the answer is yes (or no because I'm also annoyed and annoyed sometimes) | If you want to know more about me, or talk to me and be friends with me, you can check out the links I put it here: Facebook: https://www.facebook.com/MinhSon2507 | Youtube: https://www.youtube.com/c/IshiGamerKen |  I'll update more in the future!!!</p>
+        </section>
+        
+        <script src="anime.min.js"></script>
+        <script>
+           
+            const text = document.querySelector('.text');
+            text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+
+            const animation = anime.timeline({
+                targets : '.text span',
+                easing : 'easeInOutExpo',
+                loop : true,
+            });
+
+            animation
+             .add({
+                rotate : function(){
+                    return anime.random(-360,360);
+                },
+                translateX : function(){
+                    return anime.random(-360,500);
+                },
+                translateX : function(){
+                    return anime.random(-500,360);
+                },
+                duration : 5000,
+                delay : anime.stagger(100),
+             })
+
+             .add({
+                rotate : 0,
+                translateX : 0,
+                translateX : 0,
+                duration : 5000,
+                delay : anime.stagger(30),
+             })
+    
+        </script>
+    
+    </body>
+</html>

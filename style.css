@@ -1,0 +1,30 @@
+#import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+section
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+section .text
+{
+    position: relative;
+    text-align: center;
+    color: rgb(0, 238, 255);
+    margin: 40px;
+    max-width: 1350px;
+}
+section .text span
+{
+    position: relative;
+    display: inline-block;
+}
